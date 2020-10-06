@@ -1,0 +1,123 @@
+Exercises: What is React?
+
+1. What is React?
+
+React is a JavaScript library for building a reusable user interface(UI). 
+It was initially released on May 29, 2013. The current version is 16.13.1 and somehow it is stable. 
+React was created by Facebook. React makes creating UI components very easy.
+
+2. What is a library ?
+
+Library is simply a collection of functions which can be added to your application and the functions called as necessary, 
+just like any other functions in the application. More precisely any object, 
+not only functions can be stored in a library, but the vast majority of libraries only contain functions.
+
+3. What is single page application ?
+
+A single-page application is an app that works inside a browser and does not require page reloading during use. 
+You are using this type of applications every day.
+
+4. What is a Component ?
+
+Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. 
+
+5. What is the latest version of react ?
+
+16.13.1
+
+6. What is DOM ?
+
+DOM(Document Object Model) manipulation. 
+
+7. What is React Virtual DOM ?
+
+The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. 
+This process is called reconciliation.
+
+8. What does a web application or a website(composed of) may have?
+
+A web application or a website is made up of buttons, links, forms with different input fields, header, footer, sections, articles, texts, images, audios, videos and boxes with different shapes.
+ We use react to make a reusable UI component of a website.
+
+Exercises: Why React?
+
+1. Why you chose to use react?
+
+React is one of the most popular JavaScript library. Many developers and companies have been using it for the last couple of years.
+ Its popularity has been growing fast and it has a huge community.
+
+2. What measures do you use to know popularity ?
+
+One measure of popularity could be GitHub repository stars, watchers and forks. 
+
+3. What is more popular, react or Vue ?
+
+React
+
+Exercises: JSX
+
+1. What is an HTML element ?
+
+An HTML element has an opening and closing tag, content, and attribute in the opening tag. 
+
+2. Write is a self closing HTML element ?
+
+ HTML tag that does not have a content and a closing tag, 
+
+3. What is HTML attribute, write some HTML attributes ?
+
+HTML attributes provide additional information about HTML elements. 
+<a href="https://www.w3schools.com">Visit W3Schools</a> //href attribute
+
+4. What is JSX ?
+
+JSX stands for JavaScript XML. JSX allows us to write HTML elements with JavaScript code. 
+
+5. What is babel ?
+
+Babel is a library which transpile JSX to pure JavaScript and latest JavaScript to older version. 
+
+6. What is a transpiler?
+
+A transpiler (also called source-to-source compiler or a transcompiler) is a program that translates a
+ source code from a language to another
+ at the same level of abstraction 
+(which makes it different from a compiler whose output is lower level than its input). 
+
+Exercises: JSX Elements
+
+1. What is JSX element?
+
+JSX has a JavaScript and HTML like syntax. 
+JSX element could be a single HTML element or many HTML elements wrapped in a parent HTML element.
+
+2. Write your name in JSX element and store it in a name variable
+
+const Femi = <h1>My name is Femi</h1> // JS with HTML
+
+3. Write a JSX element which displays your full name, country, title, gender, email, phone number. 
+Use h1 for the name and p for the rest of the information and store it in a user variable.
+
+const user = (
+  <div>
+    <h1>Femi Akinyemi</h1>
+    <p>Nigeria</p>
+    <p>Mr.</p>
+    <p>Male</p>
+    <p>akinfemi46@gmail.com</p>
+    <p>07037495325</p>
+  </div>
+)
+
+4. Write a footer JSX element
+
+const footer = (
+  <footer>
+   <h2>This is a footer</h2>
+    <small>Oct 2, 2020</small>
+  </footer>
+)
+
+
+Exercises: Inline Style
+
