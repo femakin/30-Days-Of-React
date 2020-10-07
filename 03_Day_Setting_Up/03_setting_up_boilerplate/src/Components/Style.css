@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  html{
+    font: 100% / 1.5 "Lato", "Hiragino Maru Gothic Pro", "Meiryo UI", Meiryo, "MS PGothic", sans-serif;
+    background: #f9fbfe;
+    }
+    h1, h2, h3, h4, h5, h6, p, div {
+      color: #2b546a;
+      font-weight: normal;
+    }
+    body{
+        /* padding: 50px; */
+       width: 100vw;
+       height: 100vh;
+    }
+    h2{
+        text-align: center;
+        padding: 30px;
+      }
+      .photo{
+        width: 250px;
+        height: 250px;
+        padding: 50px; 
+      }
+      .user{
+         padding: 60px;
+      }
+      .user_image{
+         width: 200px;
+         height: 200px; 
+        border-radius: 50%;
+    }
+    .user_skills{
+       display: inline-block;
+       background-color:   rgb(89, 212, 211);
+        border: none;
+        border-radius: 10px;
+        color: white;
+        padding: 15px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 13px;
+        margin: 4px;
+        cursor: pointer;
+    }
+    .Image{
+        background-color:  rgb(240, 241, 247);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .user_element{
+        padding-bottom: 20px;
+    }
+    span{
+        padding-top: 20px;
+        display: block;
+    }
+
+    .subscribe{
+        background-color: rgb(194, 230, 244);
+       padding: 20px;
+       text-align: center;
+       font-family: 'Abel', sans-serif;
+       font-size: 20px;
+    }
+    
+    .subscribe_par{
+        padding-bottom: 20px;
+    }
+
+    .subscribe_input{
+        padding-bottom: 20px;
+    }
+    .subscribe_button{
+        background-color: #F37474; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 250px;
+    }
+
+    input{
+        padding: 10px;
+        margin: 5px;
+        border-radius: 10px;
+        background-color: white;
+        border: none;
+    }
