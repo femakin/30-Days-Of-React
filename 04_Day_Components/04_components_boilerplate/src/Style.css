@@ -1,0 +1,33 @@
+/* body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background_div{
+    width: 200px;
+    height: 200px;
+    margin: 70px;
+}
+
+.hexa{
+    padding-bottom: 25px;
+}
+
+.bg {
+    width: 90%;
+    height: 400px;
+} */
+
+.background_div{
+   
+    height: 70px;
+    
+}
+.hexa_center{
+     text-align: center;
+     padding-top: 25px; 
+   
+}
