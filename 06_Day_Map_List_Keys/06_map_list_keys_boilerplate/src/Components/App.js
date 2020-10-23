@@ -26,46 +26,43 @@ export default function App() {
   return (
     <div>
       <div>
+        <div className="con">
+          <div className="container">
+            <div className="child">
+              <div className="child_content">
+                <h1>30 Days Of React</h1>
+                <h2>World Population</h2>
+                <h3>Ten Most Populated Countries</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bar">
+          <Bargroup />
+        </div>
+      </div>
       <div className="con">
         <div className="container">
           <div className="child">
             <div className="child_content">
               <h1>30 Days Of React</h1>
-              <h2>World Population</h2>
-              <h3>Ten Most Populated Countries</h3>
+              <h2>Number Generator</h2>
             </div>
-           
-          </div>
-          
-        </div>
-        </div>
-        <div className="bar">
-        <Bargroup />
-        </div>
-        
-      </div>
-      <div className="con">
-      <div className="container">
-        <div className="child">
-          <div className="child_content">
-            <h1>30 Days Of React</h1>
-            <h2>Number Generator</h2>
-          </div>
-          <div className="ul">
-            <ul>
-              <Numbers className="block" numbers={numbers} />
-            </ul>
-          </div>
+            <div className="ul">
+              <ul>
+                <Numbers className="block" numbers={numbers} />
+              </ul>
+            </div>
 
-          <div className="child_content">
-            <h1>30 Days Of React</h1>
-            <h2>Hexadecimal Colors</h2>
+            <div className="child_content">
+              <h1>30 Days Of React</h1>
+              <h2>Hexadecimal Colors</h2>
+            </div>
+            {new Array(32).fill(0).map((item, i) => {
+              return <Hexa key={i} hexaColor={hexaColor} className="block" />;
+            })}
           </div>
-          {new Array(32).fill(0).map((item, i) => {
-            return <Hexa key={i} hexaColor={hexaColor} className="block" />;
-          })}
         </div>
-      </div>
       </div>
     </div>
   );

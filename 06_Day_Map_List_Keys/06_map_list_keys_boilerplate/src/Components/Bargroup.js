@@ -32,11 +32,6 @@ export default function Bargroup() {
 
   return (
     <div>
-{/* <div className="child_content">
-          <h1>30 Days Of React</h1>
-          <h2>World Population</h2>
-          <h3>Ten Most Populated Countries</h3>
-        </div> */}
 
 <div className="percent" >
       {tenHighestPopulation.map((countries, index) => (
