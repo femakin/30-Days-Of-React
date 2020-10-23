@@ -5,7 +5,7 @@ export default function Subscribe() {
     <div className="subscribe">
     <div className="subscribe_content">
      <h1>SUBSCRIBE</h1>
-      <p className="subscribe_par"> Sign up with your emal address to receive news and update.</p>
+      <p className="subscribe_par"> Sign up with your emall address to receive news and update.</p>
       <div className="subscribe_input">
       <input placeholder="First name" disabled/>
       <input placeholder="Last name" disabled/>

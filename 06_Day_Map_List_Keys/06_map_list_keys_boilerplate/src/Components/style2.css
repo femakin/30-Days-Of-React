@@ -1,0 +1,50 @@
+ /* body {
+    font-family: "Montserrat";
+     display: flex;
+       
+  } 
+  
+  .child_content {
+    padding-top: 40px;
+    padding-bottom: 20px;
+     justify-content: center;
+    align-items: center;
+    text-align: center; 
+  }
+   
+  .details {
+    flex-flow: row nowrap;
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .country {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px;
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+  
+  .contentWrapper{
+    flex-grow: 4;
+    flex-basis: 0;
+    width: 400px;
+    
+  }
+
+  .content{
+      background-color: yellow;
+      height: 30px; 
+  }
+  
+  .population {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 10px;
+  }
+   */
