@@ -39,7 +39,7 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
+      <div >
         <Home />
         <Random handleClick={this.handleClick} {...this.state} />
         {console.log(countriesData[0].languages[1])}
