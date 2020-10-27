@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  /* font-size: 4vh; */
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: rgb(215, 218, 211);
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 300;
+}
+
+h2,
+h3 {
+  display: flex;
+  font-weight: normal;
+  font-size: 4vh;
+  color: #1b262c;
+  text-align: left;
+}
