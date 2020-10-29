@@ -27,6 +27,7 @@ export class App extends Component {
 
   handleClick = () => {
     const generateRandomData = this.randomData();
+    
     this.setState({
       Country: generateRandomData.name,
       Capital: generateRandomData.capital,
@@ -35,14 +36,17 @@ export class App extends Component {
       flag: generateRandomData.flag,
       languages: generateRandomData.languages[0],
     });
-  };
+  
 
+  };
+  
   render() {
+   
     return (
       <div >
         <Home />
         <Random handleClick={this.handleClick} {...this.state} />
-        {console.log(countriesData[0].languages[1])}
+        
       </div>
     );
   }

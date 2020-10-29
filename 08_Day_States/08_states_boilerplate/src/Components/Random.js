@@ -13,22 +13,28 @@ export class Random extends Component {
       color: "white",
       marginTop: 30,
     };
+    // if (this.props.languages) {
+      
+    // }
+   
     return (
+      
       <div className="d-flex justify-content-center">
         <div className="card" style={{ width: "35rem" }}>
-          <img
+          <div className="country_flag"><img
             src={this.props.flag}
             alt="flag"
             className="card-img-top"
             style={{ padding: "30px" }}
-          />
+          /></div>
 
           <div className="card-body">
-            <h2 className="card-text">Country: {this.props.Country}</h2>
-            <h2 className="card-text">Capital: {this.props.Capital}</h2>
-            <h2 className="card-text">Currency: {this.props.Currency}</h2>
-            <h2 className="card-text">Population: {this.props.population}</h2>
-            <h2 className="card-text">Language(s): {this.props.languages}</h2>
+           <div className="country_content"> 
+            <h2 className="card-text"><p>Country:</p> {this.props.Country}</h2>
+            <h2 className="card-text"><p>Capital:</p> {this.props.Capital}</h2>
+            <h2 className="card-text"><p>Currency:</p> {this.props.Currency}</h2>
+            <h2 className="card-text"><p>Population: </p>{this.props.population}</h2>
+            <h2 className="card-text"><p>language(s):</p> {this.props.languages}</h2></div>
 
             <div className="btnn">
               {" "}

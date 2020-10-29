@@ -1,5 +1,75 @@
-header {
-  background-color: #61dbfb;
-  padding: 25;
-  padding: 10px;
-}
+a{
+    text-decoration: none;
+  }
+  li{
+    list-style-type: none;
+  }
+  nav{
+    display: flex;
+    justify-content: space-between;
+    min-height: 10vh;
+    align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: #00fff0; */
+  /* background-color: #fafaf6; */
+  color:#3d6cb9;
+  padding: 20px;
+  }
+  nav .logo{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  nav .nav-links{
+    display: flex;
+   justify-content: space-around;
+   width: 32%;
+   
+  }
+  nav .nav-links a{
+    font-size: 18px;
+    font-weight: normal;
+    color:#3d6cb9;
+    cursor: pointer;
+  }
+  nav .nav-links a:hover{
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+  }
+  
+  nav .burger {
+    font-size: 28px;
+    display: none;
+    cursor: pointer;
+  }
+  @media all and (max-width: 768px){
+    nav .burger {
+      font-size: 28px;
+      display: block;
+      cursor: pointer;
+    }
+  
+  nav .nav-links{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background: #00d1ff;
+    padding: 40px;
+    width: 50%;
+    transform: translateX(-500px);
+    transition: 0.5s ease-in-out;
+  }
+  nav .nav-links li{
+    padding: 25px;
+    border-bottom: 1px solid #ccc;
+  }
+  nav .nav-links li:last-of-type{
+    border-bottom: 0px solid #ccc;
+  }
+  
+  nav nav-links a:hover{
+    border-bottom: 0px solid #fff;
+  }
+  }

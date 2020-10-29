@@ -10,6 +10,7 @@
     h1, h2, h3, h4, h5, h6, p, div {
       color: #2b546a;
       font-weight: bold;
+      font-size: 1rem;
     }
     body{
         /* padding: 50px; */
@@ -17,8 +18,8 @@
        height: 100vh;
     }
     h2{
-        text-align: center;
-        padding: 30px;
+        text-align: left;
+        padding: 10px;
       }
       .photo{
         width: 250px;
@@ -71,10 +72,10 @@
         
     }  */
 
-    .card{
+     .card{
         margin-top: 50px;
         margin-bottom: 50px;
-    }
+    } 
     .btnn{
         display: flex;
       justify-content: center;
@@ -87,4 +88,12 @@
     }
     .card-text{
         line-height: 1;
+        
     }
+    .country_flag{
+        height: 12rem;
+        width: 20rem;
+        text-align: center;
+        margin: auto;
+    }
+    

@@ -1,28 +1,21 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { showDate } from '../../utils/display-date-and-time'
+import React, {useState} from 'react'
 
-const Header = ({
-  data: {
-    welcome,
-    title,
-    subtitle,
-    author: { firstName, lastName },
-    date,
-  },
-}) => {
+function Header() {
+  const [open, setOpen] = useState(false);
   return (
-    <header>
-      <div className='header-wrapper'>
-        <h1>{welcome}</h1>
-        <h2>{title}</h2>
-        <h3>{subtitle}</h3>
-        <p>
-          {firstName} {lastName}
-        </p>
-        <small>{showDate(date)}</small>
+    <div>
+        <nav>
+            <div className="logo">FemiTosin</div>
+            <ul  className="nav-links" style={{transform: open ? "translatex(0px)" : "translateX(-500px)"}}>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Portfolio</a></li>
+                <li><a href="/">Contact</a></li>
+            </ul>
+            <i onClick={()=> setOpen(!open)} className="fas fa-bars burger"></i>
+        </nav>
+        
       </div>
-    </header>
   )
 }
 
