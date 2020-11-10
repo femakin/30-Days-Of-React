@@ -1,52 +1,51 @@
-import React from "react";
-import { Component } from "react";
+import React, { Component } from 'react'
 
-export class Hover extends Component {
+export class App extends Component {
   state = {
-    hovered: false,
-  };
+    screenWidth: `${window.innerWidth}`,
+    screenHeight: `${window.innerHeight}`,
+  }
+
+onMouseEnterHendler = (e)=>{
+  const elem = e.target
+  const elemGeometryObject = elem.getBoundingClientRect()
+  const newX = Math.floor(Math.random() * (this.state.screenWidth - elemGeometryObject.width))
+  const newY = Math.floor(Math.random() * (this.state.screenHeight - elemGeometryObject.height))
+  elem.style.left = `${newX}px`
+  elem.style.top = `${newY}px`
+}
 
   render() {
+    const styles = {
+      mainScreen: {
+        position: 'relative',
+        width: `${this.state.screenWidth}px`,
+        height: `${this.state.screenHeight}px`
+      },
+     
+      movingObj: {
+        width: "410px",
+        height: "70px",
+        backgroundColor: "#60DBFC",
+        fontSize: 40,
+        lineHeight: 1,
+        fontWeight: '700',
+        padding: '1rem 2rem',
+        display: 'block',
+        position: 'absolute',
+        top: 0,
+        left: 0
+      }
+    }
     return (
-      <div
-        className="app"
-        onMouseEnter={() => this.setState({ hovered: true })}
-        onMouseLeave={() => this.setState({ hovered: false })}
-      >
-        {this.props.children(this.state.hovered)}
+      <div style={styles.mainScreen}>
+        <div style={styles.movingObj} onMouseEnter={this.onMouseEnterHendler}>
+          30 Days Of React
+          Day 11 Task(Using Event)
+        </div>
       </div>
-    );
+    )
   }
 }
 
-
-export default function App() {
-  return (
-    <div className="">
-      <Hover>
-        {(hovered) => (
-          <h2
-            className="content"
-            style={
-              hovered
-                ? {
-                    backgroundColor: "blue",
-                   
-                    marginLeft: "29rem",
-                    marginTop: "15rem",
-                    marginRight: "20rem",
-                  }
-                : {
-                    backgroundColor: "yellow",
-                    // marginLeft: "20rem",
-                    // marginTop: "9rem",
-                  }
-            }
-          >
-            Move Your Cursor Closer{" "}
-          </h2>
-        )}
-      </Hover>
-    </div>
-  );
-}
+export default App
