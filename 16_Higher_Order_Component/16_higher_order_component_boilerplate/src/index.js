@@ -1,99 +1,69 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
-const Button = ({ onClick, text, style }) => {
+const Input = ({ handlers, onClick, style, placeholder, label, id, type, name, onBlur }) => {
   return (
-    <button onClick={onClick} style={style}>
-      {text}
-    </button>
+    <div>
+      <label htmlFor={id}>{label}</label>
+      <input type={type} name={name} id={id} placeholder={placeholder} style={style} onClick={onClick} handlers={handlers} onBlur={onBlur}/>
+    </div>
   )
 }
 
-const buttonWithStyles = (CompParam, name = 'default') => {
-  const colors = [
-    {
-      name: 'default',
-      backgroundColor: '#e7e7e7',
-      color: '#000000',
-    },
-    {
-      name: 'react',
-      backgroundColor: '#61dbfb',
-      color: '#ffffff',
-    },
-    {
-      name: 'success',
-      backgroundColor: '#4CAF50',
-      color: '#ffffff',
-    },
-    {
-      name: 'info',
-      backgroundColor: '#2196F3',
-      color: '#ffffff',
-    },
-    {
-      name: 'warning',
-      backgroundColor: '#ff9800',
-      color: '#ffffff',
-    },
-    {
-      name: 'danger',
-      backgroundColor: '#f44336',
-      color: '#ffffff',
-    },
-  ]
-  const { backgroundColor, color } = colors.find((c) => c.name === name)
-
-  const buttonStyles = {
-    backgroundColor,
-    padding: '10px 45px',
+const inputWithType = (CompParam) =>{
+  const inputStyles = {
+    backgroundColor: '#e7e7e7',
+    padding: '10px 12px',
     border: 'none',
     borderRadius: 3,
     margin: 3,
     cursor: 'pointer',
-    fontSize: '1.25rem',
-    color,
-  }
-  return (props) => {
-    return <CompParam {...props} style={buttonStyles} />
-  }
+    fontSize: "1.25rem",
+    color: 'green',
 }
 
-const NewButton = buttonWithStyles(Button)
-const ReactButton = buttonWithStyles(Button, 'react')
-const InfoButton = buttonWithStyles(Button, 'info')
-const WarningButton = buttonWithStyles(Button, 'warning')
-const DangerButton = buttonWithStyles(Button, 'danger')
-const SuccessButton = buttonWithStyles(Button, 'success')
+return (props) => {
+  return <CompParam {...props} style={inputStyles} />
+}
+
+
+
+}
+
+
+
+const TextInput = inputWithType(Input)
+const NumberInput = inputWithType(Input)
+const EmailInput = inputWithType(Input)
+const PasswordInput = inputWithType(Input)
 
 class App extends Component {
   render() {
+
     return (
-      <div className='App'>
-        <h1>Higher Order Components</h1>
-        <Button text='No Style' onClick={() => alert('I am not styled yet')} />
-        <NewButton
-          text='Styled Button'
-          onClick={() => alert('I am the default style')}
-        />
-        <ReactButton text='React' onClick={() => alert('I have react color')} />
-        <InfoButton
-          text='Info'
-          onClick={() => alert('I am styled with info color')}
-        />
-        <SuccessButton text='Success' onClick={() => alert('I am successful')} />
-        <WarningButton
-          text='Warning'
-          onClick={() => alert('I warn you many times')}
-        />
-        <DangerButton
-          text='Danger'
-          onClick={() => alert('Oh no, you can not restore it')}
-        />
-      </div>
+    <div >
+       <form className='App' >
+       <TextInput   onClick={() => alert('Text. You clicked inside mу ...')} id={0} label="your name" type="text" placeholder="First Name.."/>
+     <NumberInput onClick={() => alert('Text. You clicked inside mу ...')} id={1} onBlur={() =>alert('Text. Focus is lost ...')}    label="your Number" type="number" placeholder="Phone Number.."/>
+      <EmailInput   label="Email" id={2} placeholder="Email" type="email"/>
+      <PasswordInput label="Password" type="password" id={3} placeholder="password"/>
+      </form>
+    </div>
+      
     )
   }
 }
-
 const rootElement = document.getElementById('root')
 ReactDOM.render(<App />, rootElement)
+
+
+
+// type: 'text',
+//     style: { borderRadius: '20px', color: 'green', border: '2px solid green' },
+//     hendlers: {
+//       onClick: () => console.log('Text. You clicked inside mу ...'),
+//       onBlur: () => console.log('Text. Fockus is lost ...')
+//     },
+//     placeholder: 'First name',
+//     label: 'Your name',
+//     id: 1
