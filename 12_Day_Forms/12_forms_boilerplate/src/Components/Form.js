@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 export class Form2 extends Component {
   constructor(props) {
     super(props);
