@@ -82,10 +82,12 @@ export default class Cat extends Component {
             <span>{this.state.CatMetric}</span>{" "}
           </p>
           <div className="countries-wrapper"></div>
+          {console.log(this.state.data)}
         </div>
 {
     this.state.data.map((item, id)=>(
         <MainCat options={item} key={id} />
+         
     ))
 }
 
