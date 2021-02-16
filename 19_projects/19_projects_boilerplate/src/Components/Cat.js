@@ -82,13 +82,18 @@ export default class Cat extends Component {
             <span>{this.state.CatMetric}</span>{" "}
           </p>
           <div className="countries-wrapper"></div>
-          {console.log(this.state.data)}
+          {/* {console.log(this.state.data)} */}
         </div>
 {
-    this.state.data.map((item, id)=>(
+    this.state.data.map((item, id) =>
+     (
+     <div>
+       {item.image?.url === undefined ? <h3>Error</h3> : <img src={item.image && item.image.url} alt=""/>}
+       
         <MainCat options={item} key={id} />
-         
-    ))
+     </div>
+      ))
+   
 }
 
 
