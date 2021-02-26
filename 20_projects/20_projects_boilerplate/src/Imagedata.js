@@ -27,7 +27,7 @@ export default class imagedata extends Component {
 
       const allresult = await axios.get(url);
       const alldata = await allresult.data[0];
-      console.log(alldata)
+    //   console.log(alldata)
       this.setState({
         alldata,
       });
@@ -37,13 +37,24 @@ export default class imagedata extends Component {
       const response1 = await axios.get(info);
       const infodata = await response1.data;
     //   console.log(infodata)
-      this.setState({
-        infodata,
-      });
+     
     } catch (error) {
       console.log(error);
     }
+    
   };
+
+  componentWillUnmount(){
+    if ( this.fetchCatDetails()) {
+       console.log(true)
+    }else{
+        console.log(false)
+    }
+}
+
+
+
+
 
   render() {
     const {
