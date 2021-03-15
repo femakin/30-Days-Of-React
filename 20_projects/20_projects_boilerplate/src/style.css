@@ -1,6 +1,6 @@
 .center{
     margin: auto;
-    width: 40%;
+    width: 50%;
     /* background-color: aqua;
     margin: auto;
     width: 40%; */
@@ -14,3 +14,15 @@
   margin-right: auto;
   width: 40%; */
 }
+
+/* .btn{
+        border: "1px solid #b9b7b7";
+        padding: "10px 15px";
+        text-transform: "uppercase";
+        margin: "10px 10px";
+        font-family: "Roboto";
+        font-size: "23px";
+        font-weight: "400";
+        border-radius: "2px";
+        cursor: "pointer";
+} */
